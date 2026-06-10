@@ -1,5 +1,3 @@
-import 'package:desafio/pages/telaCadastro.dart';
-import 'package:desafio/pages/telalogin.dart';
 import 'package:flutter/material.dart';
 
 class TelaHome extends StatefulWidget {
@@ -44,16 +42,17 @@ class _TelaHomeState extends State<TelaHome> {
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    expandido = !expandido;
+                    feliz = !feliz;
                   });
                 },
                 child: AnimatedContainer(
                   duration: const Duration(seconds: 1),
-                  width: expandido ? 300 : 130,
-                  height: expandido ? 300 : 130,
+                  width: feliz ? 120 : 60,
+                  height: feliz ? 120 : 60,
                   decoration: BoxDecoration(
-                      color: expandido ? Colors.blue : Colors.orange,
-                      borderRadius: BorderRadius.circular(expandido ? 30 : 10)),
+                      color: feliz ? Colors.yellow : Colors.orange,
+                      borderRadius: BorderRadius.circular(feliz ? 100 : 10)),
+                  child: Icon(Icons.face, color: Colors.white),
                 ),
               ),
             ])
